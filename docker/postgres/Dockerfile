@@ -1,2 +1,2 @@
-FROM postgres:15.3
+FROM postgres:${POSTGRES_VERSION:-14}-alpine
 
