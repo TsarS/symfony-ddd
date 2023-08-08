@@ -12,6 +12,4 @@ db.createUser(
 )
 
 use ${MONGO_INITDB_DATABASE}
-db.createCollection("users")
-db.users.insert({"name": "john"})
 EOF
