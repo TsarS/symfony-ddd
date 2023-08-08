@@ -37,7 +37,7 @@ RUN docker-php-ext-install sockets
 
 ## mongodb
 RUN pecl install mongodb && docker-php-ext-enable mongodb
-RUN echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
+# RUN echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/project
