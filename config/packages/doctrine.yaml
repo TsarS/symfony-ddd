@@ -11,15 +11,17 @@ doctrine:
         auto_generate_proxy_classes: true
         enable_lazy_ghost_objects: true
         report_fields_where_declared: true
-        validate_xml_mapping: true
+        validate_xml_mapping: false
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
         mappings:
-            App:
+            User:
                 is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+                type: xml
+                # dir: '%kernel.project_dir%/src/Entity'
+                dir: '%kernel.project_dir%/src/User/Infrastructure/Database/ORM'
+                prefix: 'App\User\Domain\Entity'
+                alias: User
 
 when@test:
     doctrine:
