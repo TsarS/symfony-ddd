@@ -1,2 +1,4 @@
+Symfony as infrastructure layer
+
 Postgres
-MongoDD
+MongoDB

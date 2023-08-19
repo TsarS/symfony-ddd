@@ -10,9 +10,9 @@ final class User
 
 
     public function __construct(
-        private string $email,
-        private string $id,
-        private string $password)
+        private readonly string $id,
+        private readonly string $email,
+        private readonly string $password)
     {
 
     }
@@ -39,15 +39,6 @@ final class User
         ];
     }
 
-    public function eraseCredentials(): void
-    {
-        // TODO: Implement eraseCredentials() method.
-    }
-
-    public function getUserIdentifier(): string
-    {
-        return $this->email;
-    }
 
 
 }
